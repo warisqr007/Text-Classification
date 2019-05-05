@@ -71,9 +71,11 @@ class ABLSTM(object):
 
 
 if __name__ == '__main__':
+    path = '/content/gdrive/My Drive/Work/pan19-author-profiling-training-2019-02-18/en/'
+    
     # load data
-    x_train, y_train = load_data("../dbpedia_data/dbpedia_csv/train.csv", sample_ratio=1e-2, one_hot=False)
-    x_test, y_test = load_data("../dbpedia_data/dbpedia_csv/test.csv", one_hot=False)
+    x_train, y_train = load_data(path+'dataTrain.csv', sample_ratio=1e-2, one_hot=False)
+    x_test, y_test = load_data(path+'dataDev.csv', one_hot=False)
 
     # data preprocessing
     x_train, x_test, vocab_size = \
